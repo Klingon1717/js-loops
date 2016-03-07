@@ -18,14 +18,20 @@ document.getElementById("guess").onclick = function(){
 		var x =Math.random();
 		x = 10 * x;
 		x=Math.floor(x);
-			if(document.getElementById("answer").value==x){
+			if(shots > 10){
 				gotcha=true;
-		}
+				console.log("nope");
+			}
+			else if(document.getElementById("answer").value==x){
+				gotcha=true;
+				console.log("GREAT SCOTT! The correct number was" + ' ' + x + ' ' + "Number of attempts to guess correctly" + ' ' + shots);
+			}
 			else{
 				shots++;
-		}
+			}
+
 	}
-			alert("GREAT SCOTT! The correct number was" + ' ' + x + ' ' + "Number of attempts to guess correctly" + ' ' + shots);
+			
 }
 
 /*var arrayString = "";
