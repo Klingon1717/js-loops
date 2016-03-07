@@ -4,9 +4,28 @@
 	<title>js-loops</title>
 </head>
 <body>
-<p id="arrayString"></p>
-<script type="text/Javascript">
 
+<p id="question">How many fanngggaasss you throwin attt me</p>
+<input id="answer"/>
+<button id="guess">click</button>
+
+<script type="text/Javascript">
+document.getElementById("guess").onclick = function(){
+	var x =Math.random();
+	x = 10 * x;
+	x=Math.floor(x);
+	alert(x);
+}
+
+/*var arrayString = "";
+var myArray = ["hi", "bye", "good", "bad"];
+var i = 0;
+	while(i < myArray.length){
+		arrayString = arrayString + myArray[i] + ' ';
+	}
+	document.getElementById("arrayString").innerHTML = arrayString;
+
+for loop/displaying myArray as a string in an empty html <p> tag
 var arrayString="";
 var myArray = ["mustard", "coke", "candy", "pizza"];
 
@@ -16,7 +35,7 @@ for(var i=0; i < myArray.length; i++){
 document.getElementById("arrayString").innerHTML = arrayString;
 
 
-/*for loop with increments of 3
+for loop with increments of 3
 for(var i =1; i< 9; i=i+3){
 	alert(i);
 }
