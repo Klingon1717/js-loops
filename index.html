@@ -11,10 +11,21 @@
 
 <script type="text/Javascript">
 document.getElementById("guess").onclick = function(){
-	var x =Math.random();
-	x = 10 * x;
-	x=Math.floor(x);
-	alert(x);
+		var gotcha = false;
+		var shots = 1;
+		var x;
+	while(gotcha == false){
+		var x =Math.random();
+		x = 10 * x;
+		x=Math.floor(x);
+			if(document.getElementById("answer").value==x){
+				gotcha=true;
+		}
+			else{
+				shots++;
+		}
+	}
+			alert("GREAT SCOTT! The correct number was" + ' ' + x + ' ' + "Number of attempts to guess correctly" + ' ' + shots);
 }
 
 /*var arrayString = "";
